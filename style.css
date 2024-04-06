@@ -1,0 +1,138 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.result,
+ .summary{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2em;
+   
+   
+}
+
+.result{
+    align-items: center;
+    background:linear-gradient(to bottom,
+     hsl(252,100%,67%),
+     hsl(241, 81%, 54%));
+     border-bottom-left-radius: 48px;
+     border-bottom-right-radius: 48px;
+    color: rgba(255, 255, 255, 0.8);
+    align-items: center;
+    text-align: center;
+    padding: 3em;
+}
+
+.result .result-score{
+    border: 2px solid white;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom,
+    hsl(241, 81%, 54%),
+    hsl(252,100%,67%)
+    );
+}
+
+.result .result-score span{
+    display: block;
+    font-size: 58px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+}
+
+.card .result .result-heading{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.summary-title{
+    font-weight: 700;
+}
+.summary .summary-item span:first-of-type{
+    display: flex;
+    gap: 0.6rem;
+    
+}
+
+.summary .summary-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 13px;
+}
+
+.summary-item span:last-of-type{
+    color: black;
+}
+
+.red{
+    color: hsl(0, 100%, 67%);
+    background-color: hsl(0, 100%, 67%,0.2)
+}
+
+.yellow{
+    color:rgba(252, 236, 3) ;
+    background-color: hsla(39,100%, 56%, 0.2);
+}
+
+.green{
+    color: hsl(166,100%,37%);
+    background-color: hsl(166,100%,37%,0.2);
+}
+.blue{
+    color: hsl(234,85%,45%);
+    background-color: hsl(234,85%,45%,0.2)
+}
+
+button{
+    border: none;
+    background-color: rgb(63, 15, 95);
+    color: white;
+    padding: 1em;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+button:hover{
+    background:linear-gradient(to bottom,
+     hsl(252,100%,67%),
+     hsl(241, 81%, 54%));
+}
+
+@media screen and (min-width:767px) {
+    .card{
+        flex-direction: row;
+        width: 600px;
+        margin: 0 auto;
+      
+        overflow: hidden;
+        
+    }
+    .result, .summary{
+        flex: 0 0 50%;
+    }
+    .result{
+        border-radius: 48px;
+    }
+}
